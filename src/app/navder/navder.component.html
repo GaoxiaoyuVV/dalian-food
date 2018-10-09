@@ -1,0 +1,70 @@
+<!-- <div class="navbar navbar-dark bg-dark box-shadow">
+  <!-- <!-- <div class="container d-flex justify-content-between"> 
+    <a href="#" class="navbar-brand d-flex align-items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+      <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">大连美食查询系统</font></font></strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> 
+  <!-- </div> 
+</div>
+justify-content-between表示导航栏在浏览器中居中显示 -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"> <!-- 在小屏幕上通过navber-expand-sm会自动将导航栏原本是水平的变成垂直的 -->
+  <a href="#" class="navbar-brand d-flex align-items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+      <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">大连美食查询系统</font></font></strong>
+    </a>
+  <div class="aaa">
+   <ul class="navbar-nav">
+         <li class="nav-item active">
+             <a href="/price" class="nav-link">
+            价格排行
+              </a>
+         </li>
+         <li class="nav-item">
+             <a href="/comment" class="nav-link">评论排行</a>
+         </li>
+         
+         <li class="nav-item">
+             <a href="/hot" class="nav-link">热度排行</a> 
+            </li>
+             <li class="nav-item">
+              <a href="/upload" class="nav-link">上传美食信息</a>
+         </li>    
+     </ul>
+ </div>
+ </nav>
+
+
+
+ <div class="formleft">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="label">Find Delicacy</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Delicacy Information" [(ngModel)]="inputdata.input" name="inputthings">
+        <small id="emailHelp" class="form-text text-muted">Input something about delicacy you want.</small>
+        <div class="buttoncenter">
+        <button type="button" class="btn btn-primary btn-lg" (click)="search()">Search</button>
+      </div>
+      </div> 
+    </form>
+   
+  </div>
+  <!-- style=" position: relative;
+    right: -463px;
+    top: -78px;
+    -webkit-logical-height: 40px;
+    line-height: 1;  -->
+
+
+<!-- <div class="aboutfooter"> -->
+<!-- <footer class="text-muted"> -->
+    <div class="madeitcenter">
+      <p class="float-right">
+        <a href="/navder">Back to Top</a>
+      </p>
+      <p class="aboutp">这里是吃货的聚集地，大连美食查询系统帮助你查询最美味的美食！</p>
+    </div>
+<!-- </footer> -->
+<!-- </div> -->

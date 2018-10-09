@@ -1,0 +1,113 @@
+.aaa{
+    width: 100%;
+    height: inherit;
+} 
+ .navbar-nav{
+ float:right; 
+/*  position: fixed;  */
+ padding-right: 10px;  /* 右边的整个link条距离右边的距离 */
+/*  display: inline-block;  */
+/* width: 35%; */
+} 
+.navbar-brand{
+    left: 50px; /* 大连美食查询系统距离左边框的距离 */
+    position: absolute;
+}
+.madeitcenter{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+.aboutp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formleft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* top: 400px; */
+    height: -webkit-fill-available;
+}
+.ng-valid{
+    width: 50%;
+}
+.buttoncenter{
+    display: flex;
+    justify-content: center;
+}
+.label{
+    display: flex;
+    margin-bottom: .5rem;
+    justify-content: center;
+    font-size: -webkit-xxx-large;
+    font-family: cursive;
+}
+.form-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.btn-lg{
+    position: absolute;
+    top:70%;
+}
+.text-muted{
+    position: absolute;
+    top:60%;
+}
+.shopname{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 36.5%;
+    font-size: larger;
+}
+.label{
+    top: 38.5%;
+    position: absolute;
+    font-size: x-large;
+    font-family: fantasy;
+    left: 20%;
+    display: -ms-grid;
+    display: grid;
+}
+.namelabel{
+    position: absolute;
+    top: 17%;
+    font-family: cursive;
+    font-size: x-large;
+}
+.name{
+    top: 17.5%;
+    position: absolute;
+    font-size: larger;
+    /* left: 35%; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.list-group-flush{
+    top: 38%;
+    position: absoluate;
+    padding-left: 35%;
+    padding-right: 10%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+.serachthing{
+    position: absolute;
+    top: 75%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    font-family: inherit;
+    font-size: x-large;
+}

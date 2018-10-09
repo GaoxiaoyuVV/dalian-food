@@ -1,0 +1,102 @@
+.aaa{
+    width: 100%;
+    height: inherit;
+} 
+ .navbar-nav{
+ float:right; 
+/*  position: fixed;  */
+ padding-right: 10px;  /* 右边的整个link条距离右边的距离 */
+/*  display: inline-block;  */
+/* width: 35%; */
+} 
+.navbar-brand{
+    left: 50px; /* 大连美食查询系统距离左边框的距离 */
+    position: absolute;
+}
+.madeitcenter{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+.aboutp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formleft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* top: 400px; */
+    height: 750px;
+}
+.ng-valid{
+    width: 50%;
+}
+.buttoncenter{
+    display: flex;
+    justify-content: center;
+}
+.label{
+    display: flex;
+    margin-bottom: .5rem;
+    justify-content: center;
+    font-size: -webkit-xxx-large;
+    font-family: cursive;
+}
+.form{
+    display: flex;
+justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    width: 50%;
+}
+.buttonchooseme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+}
+.custom-file{
+    width: 50%;
+    position: absolute;
+    display: flex;
+    /* width: 100%; */
+    /* height: calc(2.25rem + 2px); */
+    /* margin-bottom: 0; */
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 25%;
+    height: 200px;
+}
+.btn-lg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+}
+.icon{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 32%;
+    align-items: center;
+    width: -webkit-fill-available;
+}
+.tiaofu{
+    position: absolute;
+    top: 15%;
+    font-size: -webkit-xxx-large;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: -webkit-fill-available;
+}
+.body{
+    background-color:#cecece;
+}

@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="recommend">
+    <a href="https://www.google.com/intl/zh-CN_ALL/chrome/">
+      <i class="fa fa fa-chrome"></i>
+    </a>
+    Tips: Google Chrome is recommended !
+  </div>
+  <div class="welcome">
+    Welcome to join us ! ❤
+  </div>
+  <div class="somelogo">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link p-2" href="https://github.com/GaoxiaoyuVV">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link p-2" href="https://www.weibo.com/u/3559092771/home?wvr=5&uut=fin&from=reg" target="_blank">
+          <i class="fa fa-weibo fa-2x"></i>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link p-2" href="https://wx.qq.com/" target="_blank">
+          <i class="fa fa-wechat fa-2x"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="text-center" id="login">
+
+    <div class="together">
+
+      <div class="loginbrand">
+        <i class="fa fa-user fa-5x"></i>
+      </div>
+      <form class="col-2.5" id="form-signin">
+        <h1 class="h3 mb-6 font-weight-normal">Please sign up</h1>
+        <a>Username</a>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus=""
+          [(ngModel)]="reg.username" name="username">
+        <a>Password</a>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required [(ngModel)]="reg.password"
+          name="password">
+        <a>Tel</a>
+        <input type="text" id="inputTel" class="form-control" placeholder="Tel" required [(ngModel)]="reg.tel"
+          name="tel">
+        <br>
+        <button class="btn btn-lg btn-primary btn-block1" (click)="register()">Sign up</button>
+        <br>
+        <p class="mt-5 mb-3 text-muted">© 2017-2018 Designed by Xiaoyu Gao</p>
+      </form>
+    </div>
+
+
+  </div>
+
+</div>

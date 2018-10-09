@@ -1,0 +1,12 @@
+.bottom{
+    position:absolute;
+    bottom:0px;
+    }
+.formcenter{
+    position:absolute;
+    top: 250px;
+    right: 400px;
+    left: 400px;
+    bottom: 0;
+    margin: auto;
+}
