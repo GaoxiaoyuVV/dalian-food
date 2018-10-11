@@ -3,7 +3,7 @@
      <a href="/searchresult">{{a.name}}</a> 
     </li> 
 </ul> -->
-<div class="search-result">
+<!-- <div class="search-result">
 <ul class="search-results" *ngFor="let a of arr1[0][0]">
     <li class="list-group-item">
         <a href="/searchresult">
@@ -11,7 +11,11 @@
         </a> 
       </li>
 </ul>
-</div>
+<ul>
+  <li *ngFor="let a1 of arr1[0][0] | paginate: { itemsPerPage: 5, currentPage: p }">{{a1.name}}</li>
+</ul>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div> -->
 <!-- <div class="navbar navbar-dark bg-dark box-shadow">
   <!-- <!-- <div class="container d-flex justify-content-between"> 
     <a href="#" class="navbar-brand d-flex align-items-center">
@@ -49,15 +53,26 @@ justify-content-between表示导航栏在浏览器中居中显示 -->
      </ul>
  </div>
  </nav>
-
+<div class="FindResult">
+Find Result 
+</div>
  <div class="search-result">
-    <ul class="search-results" *ngFor="let a of arr1[0][0];let i=index">
-        <li class="list-group-item">
+    <ul class="search-resultul">
+        <li class="list-group-item" *ngFor="let a1 of arr1[0][0] | paginate: { itemsPerPage: 5, currentPage: p} ;let i=index">
             <a class="box" (click)="geta(i)">  <!-- 这个地方要多注意，因为是想只单纯获取点击的那一条数据，所以必须要加一个参数i，让他控制输出哪一个 -->
+              {{a1.name}}
+            </a> 
+        </li>
+      </ul>
+      <pagination-controls class="page" (pageChange)="p = $event"></pagination-controls>
+ </div>
+   <!--  <ul class="search-results" *ngFor="let a of arr1[0][0];let i=index">
+        <li class="list-group-item">
+            <a class="box" (click)="geta(i)">  <!-- 这个地方要多注意，因为是想只单纯获取点击的那一条数据，所以必须要加一个参数i，让他控制输出哪一个 
               {{a.name}}
             </a> 
           </li>
-    </ul>
+    </ul> 
     </div>
 
   <!-- style=" position: relative;

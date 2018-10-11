@@ -1,10 +1,12 @@
 .search-result{
     position: absolute;
-    top: 20%;
+    top: 25%;
     justify-content: center;
+    display: -ms-inline-grid;
     display: inline-grid;
     align-items: center;
     width: 100%;
+    height: 70%;
 }
 .aaa{
     width: 100%;
@@ -65,4 +67,26 @@
 .text-muted{
     position: absolute;
     top:60%;
+}
+/* .ng2-pagination{
+    margin-left: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+} */
+.page{
+    margin-left: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.FindResult{
+    position: absolute;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+    font-weight: bolder;
 }

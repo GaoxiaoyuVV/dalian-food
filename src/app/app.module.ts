@@ -19,6 +19,8 @@ import { HotComponent } from './hot/hot.component';
 import { PriceComponent } from './price/price.component';
 import { CommentComponent } from './comment/comment.component';
 import { SearchlistComponent } from './searchlist/searchlist.component'
+import { compileNgModuleFromRender2 } from '@angular/compiler/src/render3/r3_module_compiler';
+import { Ng2PaginationModule } from 'ng2-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { SearchlistComponent } from './searchlist/searchlist.component'
     AppRoutingModule,
     HttpClientModule,
     AngularFileUploaderModule,
-    FileUploadModule
+    FileUploadModule,
+    Ng2PaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
