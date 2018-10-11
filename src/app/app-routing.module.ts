@@ -11,6 +11,7 @@ import { UploadfailComponent } from './uploadfail/uploadfail.component';
 import { HotComponent } from './hot/hot.component';
 import { PriceComponent } from './price/price.component';
 import { CommentComponent } from './comment/comment.component';
+import { SearchlistComponent } from './searchlist/searchlist.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path:'failure' ,component:UploadfailComponent},
   { path:'hot' ,component:HotComponent },
   { path:'price', component:PriceComponent },
-  { path:'comment', component:CommentComponent}
+  { path:'comment', component:CommentComponent},
+  { path:'searchlist', component:SearchlistComponent }
 ]
 
 @NgModule({

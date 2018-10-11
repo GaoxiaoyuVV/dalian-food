@@ -34,13 +34,11 @@ export class NavderComponent implements OnInit {
       console.log('model'+model);
             } */
       console.log(data)
+      /* for(let i=0;i<data.length;i++){
+        model.push(data(i).['shopname'])
+      } */
       model.push(/* "shopname":data['shopname'],"price":data['price'] */data);
-
-      //model=data
-      this.router.navigate(['/searchresult'])
-      console.log('model' + model[1])
-
-
+      this.router.navigate(['/searchlist'])
       /* 直接发json过去 怪不得都用json！！ */
 
 

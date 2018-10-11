@@ -23,6 +23,11 @@ return this.http.post('/api/auth/register',{
   'tel':tel
 })
  }
+/*  public geta(name:string){
+return this.http.post('api/auth/searchtrue',{
+  'name':name
+})
+ } */
 public search(input:string){
 return this.http.post('/api/auth/search',{
   'input':input
@@ -36,6 +41,11 @@ PriceHighchart():Observable<any>{
 }
 CommentHighchart():Observable<any>{
   return this.http.get<any>('/api/auth/hcharts2');
+}
+public getallinfo(searchthing:string){
+  return this.http.post('api/auth/searchtrue',{
+'searchthing':searchthing,
+  }) 
 }
  /* }
  uploadFile( file: File): Observable<HttpEvent<any>> {

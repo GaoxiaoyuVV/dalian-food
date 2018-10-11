@@ -1,15 +1,17 @@
-<!-- <ul>
-  <li *ngFor="let a of arr1">
-    {{a.shopname+"   "+a.price+"  "+a.pinglun}}
-    </li>
+<!-- <ul class="list-group list-group-flush" *ngFor="let a of arr1[0][0]">
+    <li class="list-group-item">
+     <a href="/searchresult">{{a.name}}</a> 
+    </li> 
 </ul> -->
-<!-- <div class="result" *ngFor="let b of arr1">
-{{a.shopname+"        "+a.price+"      "+a.pinglun}}
-</div> -->
-<!-- ##############################
-          这是一开始的ngFor写法
-     ############################## -->
-
+<div class="search-result">
+<ul class="search-results" *ngFor="let a of arr1[0][0]">
+    <li class="list-group-item">
+        <a href="/searchresult">
+          {{a.name}}
+        </a> 
+      </li>
+</ul>
+</div>
 <!-- <div class="navbar navbar-dark bg-dark box-shadow">
   <!-- <!-- <div class="container d-flex justify-content-between"> 
     <a href="#" class="navbar-brand d-flex align-items-center">
@@ -37,6 +39,7 @@ justify-content-between表示导航栏在浏览器中居中显示 -->
          <li class="nav-item">
              <a href="/comment" class="nav-link">评论排行</a>
          </li>
+         
          <li class="nav-item">
              <a href="/hot" class="nav-link">热度排行</a> 
             </li>
@@ -46,34 +49,23 @@ justify-content-between表示导航栏在浏览器中居中显示 -->
      </ul>
  </div>
  </nav>
- <div class="namelabel">
-   Your search delicacy:
- </div>
-<div class="label">
-  <p class="shopnamelabel">Shopname：</p>
-  <p class="pinglunlabel">Comments:</p>
-  <p class="pricelabel">Price:</p>
-</div>
 
- <p *ngFor="let a1 of arr2">
-   <a class="name">{{a1.name}}</a>
-</p>
-<ul class="list-group list-group-flush" *ngFor="let a of arr2">
-    <li class="list-group-item">{{a.shopname}}</li>
-    <li class="list-group-item">{{a.pinglun}}</li>
-    <li class="list-group-item">{{a.price}}</li>
-  </ul>
+ <div class="search-result">
+    <ul class="search-results" *ngFor="let a of arr1[0][0];let i=index">
+        <li class="list-group-item">
+            <a class="box" (click)="geta(i)">  <!-- 这个地方要多注意，因为是想只单纯获取点击的那一条数据，所以必须要加一个参数i，让他控制输出哪一个 -->
+              {{a.name}}
+            </a> 
+          </li>
+    </ul>
+    </div>
+
   <!-- style=" position: relative;
     right: -463px;
     top: -78px;
     -webkit-logical-height: 40px;
     line-height: 1;  -->
-<div class="serachthing">
-    <li class="nav-item active">
-            <i class="fa fa-search fa-2x"></i>
-    </li>
-    <p>This is your search results !❤</p>
-</div>
+
 
 <!-- <div class="aboutfooter"> -->
 <!-- <footer class="text-muted"> -->

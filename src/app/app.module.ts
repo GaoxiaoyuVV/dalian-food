@@ -17,7 +17,8 @@ import { UploadfailComponent } from './uploadfail/uploadfail.component';
 import { SearchresultComponent } from './searchresult/searchresult.component';
 import { HotComponent } from './hot/hot.component';
 import { PriceComponent } from './price/price.component';
-import { CommentComponent } from './comment/comment.component'
+import { CommentComponent } from './comment/comment.component';
+import { SearchlistComponent } from './searchlist/searchlist.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { CommentComponent } from './comment/comment.component'
     SearchresultComponent,
     HotComponent,
     PriceComponent,
-    CommentComponent
+    CommentComponent,
+    SearchlistComponent
   ],
   imports: [
     BrowserModule,
