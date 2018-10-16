@@ -1,4 +1,4 @@
-.search-result{
+.search-result {
     position: absolute;
     top: 25%;
     justify-content: center;
@@ -8,79 +8,96 @@
     width: 100%;
     height: 70%;
 }
-.aaa{
+
+.aaa {
     width: 100%;
     height: inherit;
-} 
- .navbar-nav{
- float:right; 
-/*  position: fixed;  */
- padding-right: 10px;  /* 右边的整个link条距离右边的距离 */
-/*  display: inline-block;  */
-/* width: 35%; */
-} 
-.navbar-brand{
-    left: 50px; /* 大连美食查询系统距离左边框的距离 */
+}
+
+.navbar-nav {
+    float: right;
+    /*  position: fixed;  */
+    padding-right: 10px;
+    /* 右边的整个link条距离右边的距离 */
+    /*  display: inline-block;  */
+    /* width: 35%; */
+}
+
+.navbar-brand {
+    left: 50px;
+    /* 大连美食查询系统距离左边框的距离 */
     position: absolute;
 }
-.madeitcenter{
+
+.madeitcenter {
     position: fixed;
     bottom: 0;
     width: 100%;
 }
-.aboutp{
+
+.aboutp {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.formleft{
+
+.formleft {
     display: flex;
     align-items: center;
     justify-content: center;
     /* top: 400px; */
     height: -webkit-fill-available;
 }
-.ng-valid{
+
+.ng-valid {
     width: 50%;
 }
-.buttoncenter{
+
+.buttoncenter {
     display: flex;
     justify-content: center;
 }
-.label{
+
+.label {
     display: flex;
     margin-bottom: .5rem;
     justify-content: center;
     font-size: -webkit-xxx-large;
     font-family: cursive;
 }
-.form-control{
+
+.form-control {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
 }
-.btn-lg{
+
+.btn-lg {
     position: absolute;
-    top:70%;
+    top: 70%;
 }
-.text-muted{
+
+.text-muted {
     position: absolute;
-    top:60%;
+    top: 60%;
 }
+
 /* .ng2-pagination{
     margin-left: 0;
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
 } */
-.page{
+
+.page {
     margin-left: 0;
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
 }
-.FindResult{
+
+.FindResult {
     position: absolute;
     top: 15%;
     display: flex;
@@ -89,4 +106,19 @@
     font-family: cursive;
     font-size: -webkit-xxx-large;
     font-weight: bolder;
+}
+
+.p {
+    top: 80%;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.firstresult{
+    top: 35%;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    display: grid;
 }

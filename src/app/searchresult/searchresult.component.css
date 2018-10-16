@@ -111,7 +111,7 @@
     font-family: inherit;
     font-size: x-large;
 }
-/deep/.ng2-pagination{
+/* /deep/.ng2-pagination{
     display: flex;
     justify-content: center
-}
+} */
