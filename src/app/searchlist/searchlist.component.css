@@ -95,6 +95,7 @@
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
+    padding-left: 0px;
 }
 
 .FindResult {
@@ -121,4 +122,13 @@
     width: 100%;
     justify-content: center;
     display: grid;
+}
+.search-resultul{
+    width:800px;
+    padding-left:0;
+}
+.box{
+    display: flex;
+    justify-content: center;
+
 }
