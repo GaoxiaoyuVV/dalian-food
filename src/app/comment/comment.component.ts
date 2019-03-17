@@ -9,12 +9,15 @@ import * as _ from 'lodash';
 })
 export class CommentComponent implements OnInit {
 
+  userRole=''
   constructor(
     private userService:UserService
     ) { }
 
   ngOnInit() {
     this.CommentHighchart();
+    var user = JSON.parse(sessionStorage.getItem("userInfo"));
+    this.userRole = user.role;
   }
  public CommentHighchart(){
    this.userService.CommentHighchart().subscribe(data=>{
@@ -42,7 +45,7 @@ export class CommentComponent implements OnInit {
         type: 'pie'
       },
       title: {
-        text: '淘宝美食评论分析图'
+        text: '美食评论分析图'
       },
       plotOptions: {
         pie: {

@@ -1,0 +1,108 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a href="#" class="navbar-brand d-flex align-items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+        <circle cx="12" cy="13" r="4"></circle>
+      </svg>
+      <strong>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">美食查询系统</font>
+        </font>
+      </strong>
+    </a>
+    <div class="aaa">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="/price" class="nav-link">
+            价格排行
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/comment" class="nav-link">评论排行</a>
+        </li>
+  
+        <li class="nav-item">
+          <a href="/hot" class="nav-link">热度排行</a>
+        </li>
+        <li class="nav-item" *ngIf="userRole === 'admin'">
+          <a href="/upload" class="nav-link">上传美食信息</a>
+        </li>
+        <li class="nav-item" *ngIf="userRole === 'admin'">
+          <a href="/usermanagement" class="nav-link">用户管理</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="ulabel">User Managment</div>
+<div class="usertable">
+  <table class="table" id="utable">
+    <thead>
+      <tr>
+        <th scope="col">用户名</th>
+        <th scope="col">电话</th>
+        <th scope="col">角色</th>
+        <th scope="col">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let v of userlist">
+        <td>{{v.username}}</td>
+        <td>{{v.tel}}</td>
+        <td>{{v.role}}</td>
+        <td *ngIf="v.role !== 'admin'">
+          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+            编辑
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">编辑用户</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group row" style="width:95%;padding-top: 20px">
+                    <label for="inputPassword" class="col-sm-3 col-form-label">username</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputUsername" placeholder="Username" value={{v.username}}>
+                    </div>
+                  </div>
+                  <div class="form-group row" style="width:95%">
+                    <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                  </div>
+                  <div class="form-group row" style="width:95%">
+                    <label for="inputPassword" class="col-sm-3 col-form-label">Tel</label>
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control" id="inputTel">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="canel()">取消</button>
+                  <button type="button" class="btn btn-primary">保存</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          &nbsp;
+          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+            删除
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <div class="madeitcenter">
+      <p class="float-right">
+        <a href="/navder">Back to Top</a>
+      </p>
+      <p class="aboutp">这里是吃货的聚集地，美食查询系统帮助你查询最美味的美食！</p>
+    </div>

@@ -12,6 +12,7 @@ import { HotComponent } from './hot/hot.component';
 import { PriceComponent } from './price/price.component';
 import { CommentComponent } from './comment/comment.component';
 import { SearchlistComponent } from './searchlist/searchlist.component';
+import { UserManagementComponent } from './user-management/user-management.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path:'hot' ,component:HotComponent },
   { path:'price', component:PriceComponent },
   { path:'comment', component:CommentComponent},
-  { path:'searchlist', component:SearchlistComponent }
+  { path:'searchlist', component:SearchlistComponent },
+  { path:'usermanagement', component:UserManagementComponent }
 ]
 
 @NgModule({

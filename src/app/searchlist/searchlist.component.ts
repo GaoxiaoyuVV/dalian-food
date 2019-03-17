@@ -19,7 +19,7 @@ export class SearchlistComponent implements OnInit , AfterViewInit{
   public arr4: any = []
   public aa:number;
   a = new A();
-
+  userRole:''
   constructor(
     private userService: UserService,
     public element: ElementRef,
@@ -101,6 +101,8 @@ export class SearchlistComponent implements OnInit , AfterViewInit{
     //this.getpage(1);
     this.handleData(this.aa);
     this.chajian();
+    var user = JSON.parse(sessionStorage.getItem("userInfo"));
+    this.userRole = user.role;
     //this.getpage(1);
   }
   /* this.arr1.push(this.arr2)

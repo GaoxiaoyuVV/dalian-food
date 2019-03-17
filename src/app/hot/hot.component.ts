@@ -9,12 +9,15 @@ import * as $ from 'jquery';
   styleUrls: ['./hot.component.css']
 })
 export class HotComponent implements OnInit {
-
+  userRole = ''
   constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.HotHighchart();
     this.setpage_height();
+    var user = JSON.parse(sessionStorage.getItem("userInfo"));
+    this.userRole = user.role;
+    console.log(this.userRole)
   }
   public HotHighchart() {
     this.userService.HotHighchart().subscribe(data => {
@@ -44,7 +47,7 @@ export class HotComponent implements OnInit {
           type: 'pie'
         },
         title: {
-          text: '淘宝美食热度分析图'
+          text: '美食热度分析图'
         },
         plotOptions: {
           pie: {

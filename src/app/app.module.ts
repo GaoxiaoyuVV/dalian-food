@@ -21,6 +21,7 @@ import { CommentComponent } from './comment/comment.component';
 import { SearchlistComponent } from './searchlist/searchlist.component'
 import { compileNgModuleFromRender2 } from '@angular/compiler/src/render3/r3_module_compiler';
 import { Ng2PaginationModule } from 'ng2-pagination';
+import { UserManagementComponent } from './user-management/user-management.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { Ng2PaginationModule } from 'ng2-pagination';
     HotComponent,
     PriceComponent,
     CommentComponent,
-    SearchlistComponent
+    SearchlistComponent,
+    UserManagementComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import {formatNumber} from '@angular/common';
 })
 export class PriceComponent implements OnInit {
 
+  userRole:''
   constructor(
     private userService: UserService
   ) {
@@ -18,6 +19,8 @@ export class PriceComponent implements OnInit {
 
   ngOnInit() {
     this.PriceHighchart();
+    var user = JSON.parse(sessionStorage.getItem("userInfo"));
+    this.userRole = user.role;
   }
 
   public PriceHighchart() {
@@ -49,7 +52,7 @@ export class PriceComponent implements OnInit {
           type: 'pie'
         },
         title: {
-          text: '淘宝美食价格分析图'
+          text: '美食价格分析图'
         },
         plotOptions: {
           pie: {

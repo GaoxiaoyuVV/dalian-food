@@ -21,7 +21,7 @@ justify-content-between表示导航栏在浏览器中居中显示 -->
       </svg>
       <strong>
         <font style="vertical-align: inherit;">
-          <font style="vertical-align: inherit;">淘宝美食查询系统</font>
+          <font style="vertical-align: inherit;">美食查询系统</font>
         </font>
       </strong>
     </a>
@@ -39,8 +39,11 @@ justify-content-between表示导航栏在浏览器中居中显示 -->
         <li class="nav-item">
           <a href="/hot" class="nav-link">热度排行</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="userRole === 'admin'">
           <a href="/upload" class="nav-link">上传美食信息</a>
+        </li>
+        <li class="nav-item" *ngIf="userRole === 'admin'">
+          <a href="/usermanagement" class="nav-link">用户管理</a>
         </li>
       </ul>
     </div>
@@ -54,6 +57,6 @@ justify-content-between表示导航栏在浏览器中居中显示 -->
     <p class="float-right">
       <a href="#">Back to Top</a>
     </p>
-    <p class="aboutp">这里是吃货的聚集地，淘宝美食查询系统帮助你查询最美味的美食！</p>
+    <p class="aboutp">这里是吃货的聚集地，美食查询系统帮助你查询最美味的美食！</p>
   </div>
 </div>

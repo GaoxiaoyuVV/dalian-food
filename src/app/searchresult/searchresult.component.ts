@@ -10,6 +10,7 @@ import { UserService } from '../user.service';
 export class SearchresultComponent implements OnInit {
 public arr1:any=[]
 public arr2:any=[]
+userRole:''
   constructor(
     private userService:UserService
   ) { }
@@ -17,6 +18,8 @@ public arr2:any=[]
   ngOnInit() {
     console.log(SearchlistComponent.getinfo())
     this.getallinfo();
+    var user = JSON.parse(sessionStorage.getItem("userInfo"));
+    this.userRole = user.role;
   }
 public getallinfo(){
   this.arr1=SearchlistComponent.getinfo();

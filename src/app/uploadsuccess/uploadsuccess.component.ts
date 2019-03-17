@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class UploadsuccessComponent implements OnInit {
 
   constructor() { }
-
+  userRole:''
   ngOnInit() {
+    var user = JSON.parse(sessionStorage.getItem("userInfo"));
+    this.userRole = user.role;
   }
 
 }

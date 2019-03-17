@@ -16,6 +16,7 @@ export class UploadComponent implements OnInit {
     method: 'POST',
     itemAlias: 'file'
   });
+  userRole:''
   constructor(private http:HttpClient,
               private userService:UserService,
               private router: Router
@@ -92,6 +93,7 @@ export class UploadComponent implements OnInit {
       this.router.navigate(['/success'])
     }
 ngOnInit(){
-
+  var user = JSON.parse(sessionStorage.getItem("userInfo"));
+    this.userRole = user.role;
 }
 }
