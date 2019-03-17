@@ -16,13 +16,14 @@ public login(username: string, password: string) {
          'password': password
        });
  }
- public register(username:string,password:string,tel:string){
-return this.http.post('/api/auth/register',{
-  'username':username,
-  'password':password,
-  'tel':tel
-})
- }
+  public register(username: string, password: string, tel: string) {
+    return this.http.post('/api/auth/register', {
+      'username': username,
+      'password': password,
+      'tel': tel,
+      'role': 'user'
+    })
+  }
 /*  public geta(name:string){
 return this.http.post('api/auth/searchtrue',{
   'name':name

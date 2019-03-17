@@ -3,22 +3,27 @@
     width: 100vw;
     height: 100vh;
 } */
+
 .form-signin {
     width: 100%;
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
 }
-.text-center{
+
+.text-center {
     width: 100%;
     height: 100%;
-    margin-top: 0;  /* 距离顶部9rem的距离 */
+    margin-top: 0;
+    /* 距离顶部9rem的距离 */
     display: flex;
-    align-items: center;  /* 让登录框居中显示 */
+    align-items: center;
+    /* 让登录框居中显示 */
     justify-content: center;
     background-color: #cecece;
     /* background-color: chartreuse; */
 }
+
 /* .body{   
     margin: 0;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -29,27 +34,32 @@
     text-align: left;
     background-color: #62c107;
 } */
-#login{
+
+#login {
     display: flex;
-    align-items: center;  /* 让登录框居中显示 */
+    align-items: center;
+    /* 让登录框居中显示 */
     justify-content: center;
-   /*  background-color: chartreuse; */
+    /*  background-color: chartreuse; */
     /* height: 550px; */
 }
+
 /* .loginbrand{
     position: fixed;
     top: 14%;
 } */
-.btn-block1{
+
+.btn-block1 {
     width: 100%;
     align-items: center;
     justify-content: center;
 }
-.body{
+
+.body {
     background-color: #cecece
 }
-.container{
- 
+
+.container {
     max-width: 100vw;
     padding-right: 0px;
     padding-left: 0px;
@@ -59,15 +69,18 @@
     bottom: 0;
     top: 0;
 }
-.font-weight-normal{
+
+.font-weight-normal {
     line-height: 3
 }
-.together{
+
+.together {
     background-color: #fff;
     padding: 40px;
     border-radius: 30px;
 }
-.somelogo{
+
+.somelogo {
     position: absolute;
     top: 0;
     right: 0;
@@ -75,32 +88,39 @@
     color: white;
     /* background-color: #fff; */
 }
-.i{
+
+.i {
     padding: 10px;
 }
-.fa-github{
-padding: 10px;
-}
-.fa-wechat{
+
+.fa-github {
     padding: 10px;
 }
-.fa-weibo{
+
+.fa-wechat {
     padding: 10px;
 }
-.navbar-nav{
+
+.fa-weibo {
+    padding: 10px;
+}
+
+.navbar-nav {
     display: flex;
     flex-direction: row;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
 }
-.recommend{
+
+.recommend {
     position: absolute;
     bottom: 20px;
     font-family: cursive;
     font-size: x-large;
 }
-.link{
+
+.link {
     position: fixed;
     /* top: 70%; */
 }

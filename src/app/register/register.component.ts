@@ -16,14 +16,16 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
   }
-  public register(username:string, password:string, tel:number): void {
+  public register(username: string, password: string, tel: number): void {
     console.log(this.reg.username)
+    this.reg.role = 'user';
+    console.log(this.reg.role)
     this.userService.register(this.reg.username, this.reg.password, this.reg.tel).subscribe((data) => {
-
       console.log(data);
-    }
-
-    )
+      if (data['message'] === '注册完毕') {
+        this.router.navigate(['/login'])
+      }
+    })
   }
 }
 

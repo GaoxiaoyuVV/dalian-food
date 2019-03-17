@@ -14,6 +14,7 @@ let model = [];
 export class NavderComponent implements OnInit {
 
   arr = []
+  userRole = ''
   inputdata: Input = new Input();
   constructor(private http: HttpClient,
     private userService: UserService,
@@ -22,6 +23,9 @@ export class NavderComponent implements OnInit {
 
   ngOnInit() {
     model.length = 0;//将数组长度变为0，从而达到清空model的目的
+    var user = JSON.parse(sessionStorage.getItem("userInfo"));
+    this.userRole = user.role;
+    console.log(this.userRole)
   }
   public search(input: string): void {
     this.userService.search(this.inputdata.input).subscribe((data) => {
