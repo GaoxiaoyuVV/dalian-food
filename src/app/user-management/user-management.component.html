@@ -74,19 +74,19 @@
                   <div class="form-group row" style="width:95%">
                     <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
                     <div class="col-sm-9">
-                      <input type="password" class="form-control" id="inputPassword">
+                      <input type="password" class="form-control" id="inputPassword" [(ngModel)]="userCheckedList.password" style="width:100%;">
                     </div>
                   </div>
                   <div class="form-group row" style="width:95%">
                     <label for="inputPassword" class="col-sm-3 col-form-label">Tel</label>
                     <div class="col-sm-9">
-                      <input type="password" class="form-control" id="inputTel">
+                      <input type="text" class="form-control" id="inputTel" [(ngModel)]="userCheckedList.tel" style="width:100%;">
                     </div>
                   </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="canel()">取消</button>
-                  <button type="button" class="btn btn-primary">保存</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="save()">保存</button>
                 </div>
               </div>
             </div>

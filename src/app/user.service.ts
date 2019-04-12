@@ -29,6 +29,10 @@ export class UserService {
     'name':name
   })
    } */
+  public changeUserInfo(body: any) {
+    console.log(body)
+    return this.http.post('/api/auth/userInfo', body);
+  }
   public search(input: string) {
     return this.http.post('/api/auth/search', {
       'input': input

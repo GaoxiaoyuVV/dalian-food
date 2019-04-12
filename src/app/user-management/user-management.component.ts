@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { UserService } from '../user.service';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-user-management',
   templateUrl: './user-management.component.html',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserManagementComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
   userRole: ''
   userlist: ''
-  userCheckedList: ''
+  userCheckedList: string
   showModal: string
   ngOnInit() {
     var user = JSON.parse(sessionStorage.getItem("userInfo"));
@@ -21,8 +22,21 @@ export class UserManagementComponent implements OnInit {
     console.log("click canel")
   }
   public openModal(v: any) {
+    var temp = ''
     this.showModal = 'show';
-    this.userCheckedList = v;
+    temp = JSON.parse(JSON.stringify(v))
+    this.userCheckedList = temp;
   }
-
+  public save(): void {
+    console.log(this.userCheckedList);
+    this.userService.changeUserInfo(this.userCheckedList).subscribe(data => {
+      if(data['message'] === 'success'){
+        console.log('aaaaaa')
+        $('#exampleModal').modal('hide')
+      }
+      console.log(data)
+    }, (error) => {
+      console.log(' update: error ');
+    })
+  }
 }
