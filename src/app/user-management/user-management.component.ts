@@ -8,17 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class UserManagementComponent implements OnInit {
 
   constructor() { }
-  userRole:''
-  userlist:''
+  userRole: ''
+  userlist: ''
+  userCheckedList: ''
+  showModal: string
   ngOnInit() {
     var user = JSON.parse(sessionStorage.getItem("userInfo"));
     this.userRole = user.role;
-    console.log(this.userRole)
     this.userlist = user.userdata;
-    console.log(this.userlist)
   }
-  public canel():void{
+  public canel(): void {
     console.log("click canel")
+  }
+  public openModal(v: any) {
+    this.showModal = 'show';
+    this.userCheckedList = v;
   }
 
 }
