@@ -124,3 +124,7 @@
     position: fixed;
     /* top: 70%; */
 }
+
+.loginFont{
+    color:red;
+}

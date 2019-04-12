@@ -33,6 +33,13 @@ export class UserService {
     console.log(body)
     return this.http.post('/api/auth/userInfo', body);
   }
+  public delUserInfo(body: any) {
+    console.log(body)
+    return this.http.post('/api/auth/delUserInfo', body);
+  }
+  public getUserInfo(): Observable<any> {
+    return this.http.get<any>('/api/auth/userInfo');
+  }
   public search(input: string) {
     return this.http.post('/api/auth/search', {
       'input': input

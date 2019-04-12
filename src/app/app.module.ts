@@ -22,6 +22,7 @@ import { SearchlistComponent } from './searchlist/searchlist.component'
 import { compileNgModuleFromRender2 } from '@angular/compiler/src/render3/r3_module_compiler';
 import { Ng2PaginationModule } from 'ng2-pagination';
 import { UserManagementComponent } from './user-management/user-management.component';
+/* import {ToastModule} from 'ng2-toastr/ng2-toastr'; */
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
     AngularFileUploaderModule,
     FileUploadModule,
     Ng2PaginationModule,
+    /* ToastModule */
   ],
   providers: [],
   bootstrap: [AppComponent]

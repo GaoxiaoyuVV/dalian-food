@@ -58,3 +58,8 @@
     position: absolute;
     top:60%;
 }
+#searchDanger{
+    color: red;
+    top: 58%;
+    position: absolute;
+}

@@ -55,6 +55,7 @@ justify-content-between表示导航栏在浏览器中居中显示 -->
       <div class="form-group">
         <label for="exampleInputEmail1" class="label">Find Delicacy</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Delicacy Information" [(ngModel)]="inputdata.input" name="inputthings">
+        <small id="searchDanger" *ngIf="noSearchInfo === 'nothing'">没找到符合您要求的美食信息</small>
         <small id="emailHelp" class="form-text text-muted">Input something about delicacy you want.</small>
         <div class="buttoncenter">
         <button type="button" class="btn btn-primary btn-lg" (click)="search()">Search</button>

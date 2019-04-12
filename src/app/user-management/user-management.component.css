@@ -78,3 +78,18 @@
     font-size: -webkit-xxx-large;
     font-family: cursive;
 }
+.alertOutside{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    padding-left: 700px;
+    padding-right: 700px;
+}
+#user_Success_Alert{
+    display: flex;
+    justify-content: center;
+}
+#user_Fail_Alert{
+    display: flex;
+    justify-content: center;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+/* import { ToastsManager } from 'ng2-toastr/ng2-toastr'; */
 import * as $ from 'jquery';
 @Component({
   selector: 'app-user-management',
@@ -13,10 +14,12 @@ export class UserManagementComponent implements OnInit {
   userlist: ''
   userCheckedList: string
   showModal: string
+  ifSuccess: string
+  ifFail: string
   ngOnInit() {
     var user = JSON.parse(sessionStorage.getItem("userInfo"));
     this.userRole = user.role;
-    this.userlist = user.userdata;
+    this.getUserInfo();
   }
   public canel(): void {
     console.log("click canel")
@@ -30,13 +33,40 @@ export class UserManagementComponent implements OnInit {
   public save(): void {
     console.log(this.userCheckedList);
     this.userService.changeUserInfo(this.userCheckedList).subscribe(data => {
-      if(data['message'] === 'success'){
-        console.log('aaaaaa')
-        $('#exampleModal').modal('hide')
+      console.log(data)
+      if (data['message'] === 'success') {
+        this.ifSuccess = 'success';
+        setTimeout(function () {
+          $('.alertOutside').css('display', 'none');
+        }, 2000);
+      } else {
+        this.ifFail = 'fail'
       }
       console.log(data)
     }, (error) => {
       console.log(' update: error ');
+      this.ifFail = 'fail'
+      setTimeout(function () {
+        $('.alertOutside').css('display', 'none');
+      }, 2000);
+    })
+  }
+  public getUserInfo() {
+    this.userService.getUserInfo().subscribe(data => {
+      console.log(data)
+      this.userlist = data;
+    })
+  }
+  public delUser(v: any) {
+    this.userService.delUserInfo(v).subscribe(data => {
+      console.log(data)
+      if (data['message'] === 'success') {
+        /* this.userService.getUserInfo().subscribe(data => {
+          console.log(data)
+          this.userlist = data;
+        }) */
+        this.getUserInfo();
+      }
     })
   }
 }

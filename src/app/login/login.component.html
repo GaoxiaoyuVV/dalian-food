@@ -13,7 +13,8 @@
                 </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link p-2" href="https://www.weibo.com/u/3559092771/home?wvr=5&uut=fin&from=reg" target="_blank">
+                <a class="nav-link p-2" href="https://www.weibo.com/u/3559092771/home?wvr=5&uut=fin&from=reg"
+                    target="_blank">
                     <i class="fa fa-weibo fa-2x"></i>
                 </a>
             </li>
@@ -47,15 +48,10 @@
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required
                     [(ngModel)]="user.password" name="password">
-                <div class="checkbox mb-3">
-                    <br>
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
-
+                <br>
                 <button class="btn btn-lg btn-primary btn-block1" (click)="login()">Sign in</button>
                 <br>
+                <small class="loginFont" *ngIf="loginData === 'fail'">登录失败，用户名或密码错误！</small>
                 <div class="link">
                     <a href="/register">I you don't have account ,please sign up</a>
                 </div>

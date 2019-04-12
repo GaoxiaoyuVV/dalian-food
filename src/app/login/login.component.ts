@@ -9,11 +9,12 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   user: User = new User();
+  loginData: string
   constructor(private userService: UserService,
     private router: Router) { }
 
   ngOnInit() {
-    this.login()
+    this.loginData = 'default';
   }
   public login(): void {
     console.log(this.user.username)
@@ -25,10 +26,12 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/navder'])
       } else {
         this.router.navigate(['/login'])
+        this.loginData = 'fail'
         console.log(this.user.username + '的密码不正确，请确认后再登录');
       }
     }, (error) => {
       console.log('login: error ');
+      this.loginData = 'fail'
     })
   }
 }
