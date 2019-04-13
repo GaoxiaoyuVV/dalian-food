@@ -21,16 +21,16 @@ userRole:''
     var user = JSON.parse(sessionStorage.getItem("userInfo"));
     this.userRole = user.role;
   }
-public getallinfo(){
-  this.arr1=SearchlistComponent.getinfo();
-  console.log(this.arr1)
-  this.userService.getallinfo(this.arr1).subscribe(data=>{
-console.log(data['name'])
-this.arr2.push(data)
-console.log(this.arr2)
-  })
-  
-}
+  public getallinfo() {
+    this.arr1 = SearchlistComponent.getinfo();
+    console.log(this.arr1)
+    this.userService.getallinfo(this.arr1).subscribe(data => {
+      console.log(data['name'])
+      this.arr2.push(data)
+      console.log(this.arr2)
+    })
+
+  }
 
   //public handleData1(){
     //this.arr1=SearchlistComponent.getinfo()
