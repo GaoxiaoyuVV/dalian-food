@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UserService} from '../user.service';
 import * as Highcharts from 'highcharts';
 import * as _ from 'lodash';
+import * as $ from 'jquery';
 import {formatNumber} from '@angular/common';
 
 @Component({
@@ -19,8 +20,16 @@ export class PriceComponent implements OnInit {
 
   ngOnInit() {
     this.PriceHighchart();
+    this.setpage_height();
     var user = JSON.parse(sessionStorage.getItem("userInfo"));
     this.userRole = user.role;
+  }
+
+  public setpage_height() {
+    //nothing to do except test the jquery if it will be useful
+    console.log(window.innerHeight)
+    var height = window.innerHeight;
+    $('.main').css('height', height);
   }
 
   public PriceHighchart() {

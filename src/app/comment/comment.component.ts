@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import * as Highcharts from 'highcharts';
 import * as _ from 'lodash';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-comment',
   templateUrl: './comment.component.html',
@@ -16,8 +17,15 @@ export class CommentComponent implements OnInit {
 
   ngOnInit() {
     this.CommentHighchart();
+    this.setpage_height();
     var user = JSON.parse(sessionStorage.getItem("userInfo"));
     this.userRole = user.role;
+  }
+  public setpage_height() {
+    //nothing to do except test the jquery if it will be useful
+    console.log(window.innerHeight)
+    var height = window.innerHeight;
+    $('.main').css('height', height);
   }
  public CommentHighchart(){
    this.userService.CommentHighchart().subscribe(data=>{
