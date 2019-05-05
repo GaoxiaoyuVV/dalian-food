@@ -1,65 +1,78 @@
-.aaa{
+.aaa {
     width: 100%;
     height: inherit;
-} 
- .navbar-nav{
- float:right; 
-/*  position: fixed;  */
- padding-right: 10px;  /* 右边的整个link条距离右边的距离 */
-/*  display: inline-block;  */
-/* width: 35%; */
-} 
-.navbar-brand{
-    left: 50px; /* 大连美食查询系统距离左边框的距离 */
+}
+
+.navbar-nav {
+    float: right;
+    /*  position: fixed;  */
+    padding-right: 10px;
+    /* 右边的整个link条距离右边的距离 */
+    /*  display: inline-block;  */
+    /* width: 35%; */
+}
+
+.navbar-brand {
+    left: 50px;
+    /* 大连美食查询系统距离左边框的距离 */
     position: absolute;
 }
-.madeitcenter{
-    position:absolute;
+
+.madeitcenter {
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
-.aboutp{
+
+.aboutp {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.formleft{
+
+.formleft {
     display: flex;
     align-items: center;
     justify-content: center;
     /* top: 400px; */
     height: 750px;
 }
-.ng-valid{
+
+.ng-valid {
     width: 50%;
 }
-.buttoncenter{
+
+.buttoncenter {
     display: flex;
     justify-content: center;
 }
-.label{
+
+.label {
     display: flex;
     margin-bottom: .5rem;
     justify-content: center;
     font-size: -webkit-xxx-large;
     font-family: cursive;
 }
-.form{
+
+.form {
     display: flex;
-justify-content: center;
+    justify-content: center;
     align-items: center;
     position: absolute;
     top: 50%;
     width: 50%;
 }
-.buttonchooseme{
+
+.buttonchooseme {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 60%;
 }
-.custom-file{
+
+.custom-file {
     width: 50%;
     position: absolute;
     display: flex;
@@ -72,14 +85,16 @@ justify-content: center;
     left: 25%;
     height: 200px;
 }
-.btn-lg{
+
+.btn-lg {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 60%;
 }
-.icon{
+
+.icon {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -87,7 +102,8 @@ justify-content: center;
     align-items: center;
     width: -webkit-fill-available;
 }
-.tiaofu{
+
+.tiaofu {
     position: absolute;
     top: 15%;
     font-size: -webkit-xxx-large;
@@ -97,6 +113,7 @@ justify-content: center;
     align-items: center;
     width: -webkit-fill-available;
 }
-.body{
-    background-color:#cecece;
+
+.body {
+    background-color: #cecece;
 }
