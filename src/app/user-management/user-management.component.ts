@@ -33,9 +33,9 @@ export class UserManagementComponent implements OnInit {
   public save(): void {
     console.log(this.userCheckedList);
     this.userService.changeUserInfo(this.userCheckedList).subscribe(data => {
-      console.log(data)
       if (data['message'] === 'success') {
         this.ifSuccess = 'success';
+        this.getUserInfo();
         setTimeout(function () {
           $('.alertOutside').css('display', 'none');
         }, 2000);

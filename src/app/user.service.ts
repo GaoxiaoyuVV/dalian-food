@@ -31,7 +31,7 @@ export class UserService {
    } */
   public changeUserInfo(body: any) {
     console.log(body)
-    return this.http.post('/api/auth/userInfo', body);
+    return this.http.post('/api/auth/updateUserInfo', body);
   }
   public delUserInfo(body: any) {
     console.log(body)
